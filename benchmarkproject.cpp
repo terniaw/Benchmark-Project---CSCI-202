@@ -67,3 +67,34 @@ int main()
     std::cout << arrayTime_taken << " seconds" << std::endl;
     return 0;
 }
+
+/*
+//benchmark= run time
+
+void file(){
+ofstream outFile;
+outFile.open("file.txt"); //open the file 
+
+
+//long file_items= 1000000000.0; //10^9, number of items to go in the file 
+double file_items=5.0; 
+
+for(double i= 0;i<file_items;i++){
+  outFile<<"naja"<<endl;  //add text to the file 
+
+
+//read from the file 
+string byte; 
+ifstream file ("file.txt"); 
+if(file.is_open())
+{
+  while(getline (file,byte)){
+    cout<<byte<<"\n"; 
+
+  }
+  file.close(); 
+}
+}
+
+}
+*/
