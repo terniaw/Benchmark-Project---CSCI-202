@@ -6,7 +6,7 @@
 int main()
 {
     
-    clock_t intTime;
+    clock_t intTime; //part 1, 32-bit Integer operation benchmark (reference time: 100 seconds)
     intTime = clock();
     //32-bit integer operation benchmark
     int32_t n = 0;
@@ -25,7 +25,7 @@ int main()
     double intTime_taken = ((double)intTime)/CLOCKS_PER_SEC;
     std::cout << intTime_taken << " seconds" << std::endl;
 
-    clock_t floatTime;
+    clock_t floatTime; //part 2, 32-bit Floating point operation benchmark (reference time: 500 seconds)
     floatTime = clock();
     //32-bit float operation benchmark
     float x = 0.0;
@@ -46,7 +46,7 @@ int main()
     std::cout << floatTime_taken << " seconds" << std::endl;
 
     //memory benchmark
-    clock_t arrayTime;
+    clock_t arrayTime; //part 3, Memory benchmark (reference time: 100 seconds)
     arrayTime = clock();
     int64_t benchArr[1000000];
     int64_t read;
@@ -72,7 +72,7 @@ int main()
 //benchmark= run time
 
 void file(){
-ofstream outFile;
+ofstream outFile; //part 4, Hard drive benchmark (reference time: 1000 seconds)
 outFile.open("file.txt"); //open the file 
 
 
