@@ -57,5 +57,13 @@ int main()
         }
     }
     //read elements
-
+    for(int g = 0; g < 5000; g++){
+        for(int64_t h = 0; h < 1000000; h++){
+            read = benchArr[h];
+        }
+    }
+    arrayTime = clock() - arrayTime;
+    double arrayTime_taken = ((double)arrayTime)/CLOCKS_PER_SEC;
+    std::cout << arrayTime_taken << " seconds" << std::endl;
+    return 0;
 }
