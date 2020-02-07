@@ -41,4 +41,21 @@ int main()
         z = 2.0 / 2.0;
     }
 
+    floatTime = clock() - floatTime;
+    double floatTime_taken = ((double)floatTime)/CLOCKS_PER_SEC;
+    std::cout << floatTime_taken << " seconds" << std::endl;
+
+    //memory benchmark
+    clock_t arrayTime;
+    arrayTime = clock();
+    int64_t benchArr[1000000];
+    int64_t read;
+    //write in elements
+    for(int e = 0; e < 5000; e++){
+        for(int64_t f = 0; f < 1000000; f++){
+            benchArr[f] = f;
+        }
+    }
+    //read elements
+
 }
